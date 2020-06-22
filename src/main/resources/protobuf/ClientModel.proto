@@ -1,0 +1,6 @@
+syntax="proto2";
+
+message Client {
+  required string uuid = 1;
+  required string name = 2;
+}
