@@ -21,7 +21,7 @@ public class ClientDeserializer implements Deserializer<ClientModel.Client> {
     @SneakyThrows
     @Override
     public ClientModel.Client deserialize(String topic, Headers headers, byte[] data) {
-        data = null;
+//        data = null;
         return ClientModel.Client.parseFrom(data);
     }
 
