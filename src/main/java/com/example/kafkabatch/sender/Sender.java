@@ -15,9 +15,12 @@ public class Sender {
 
     @Value("${app.topic.batch}")
     private String topic;
+    @Value("${app.topic.other}")
+    private String otherTopic;
 
     public void send(byte[] data){
         log.info("sending message='{}' to topic='{}'", data, topic);
         kafkaTemplate.send(topic, data);
+        kafkaTemplate.send(otherTopic, data);
     }
 }

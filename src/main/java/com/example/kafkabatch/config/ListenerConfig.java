@@ -50,9 +50,9 @@ public class ListenerConfig {
     public ConcurrentKafkaListenerContainerFactory<String, Client> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, Client> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
-        factory.setBatchListener(true);
+//        factory.setBatchListener(true);
 //        factory.setReplyHeadersConfigurer((k,v) -> k.equals("replay"));
-        factory.setBatchErrorHandler(new ErrorHandlerBatch());
+//        factory.setBatchErrorHandler(new ErrorHandlerBatch());
 //        factory.setErrorHandler(new ErrorHandler()); only when not a batch listener
 //        factory.getContainerProperties().setPollTimeout(500L);
         factory.setAckDiscarded(true);
